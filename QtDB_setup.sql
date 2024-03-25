@@ -32,22 +32,24 @@ COMMENT ON DATABASE 'QtDB'
 /connect 'QtDB';
 
 CREATE TABLE owners_data (
-    owner_id        ...,
-    last_name       ...,
-    first_name      ...,
-    patronymic      ...,
-    pass_series     ...,
-    pass_number     ...,
-    phone_number    ...,
-    email           ...
+    owner_id        SERIAL PRIMARY KEY UNIQUE,
+    last_name       text NOT NULL CHECK(last_name SIMILAR TO E'^[А-Яа-яЁе]+[А-Яа-яЁе\ \-\']*[А-Яа-яЁе]+$'),
+    first_name      text NOT NULL CHECK(first_name SIMILAR TO E'^[А-Яа-яЁе]+[А-Яа-яЁе\ \-\']*[А-Яа-яЁе]+$'),
+    patronymic      text CHECK(patronymic SIMILAR TO E'^[А-Яа-яЁе]*[А-Яа-яЁе\ \-\']*[А-Яа-яЁе]*$'),
+    pass_series     char( 4 ) NOT NULL CHECK(pass_series SIMILAR TO E'^\d\d\d\d$'),
+    pass_number     char( 8 ) NOT NULL CHECK(pass_number SIMILAR TO E'^\d\d\d\d\d\d$'),
+    phone_number    char(11 ) NOT NULL UNIQUE CHECK(phone_number SIMILAR TO '^8\d\d\d\d\d\d\d\d\d\d$'),
+    email           text UNIQUE CHECK(email SIMILAR TO '[A-Za-z]+@[A-Za-z]+\.[A-Za-z]+')
 )
 
-CREATE TABLE cars_data (
-    car_id         ...,
-    car_mark       ...,
-    car_model      ...,
-    car_color      ...,
-    car_category   ...,
-    car_vin        ...,
-    owner_id       ...
-)
+CREATE TYPE category AS ENUM ('A', 'A1', 'B', 'BE', 'B1', 'C', 'CE', 'C1', 'C1E', 'D', 'DE', 'D1', 'D1E', 'M', 'Tm', 'Tb')
+
+--CREATE TABLE cars_data (
+--    car_id         SERIAL PRIMARY KEY UNIQUE,
+--    car_mark       text NOT NULL,
+--    car_model      text NOT NULL,
+--    car_color      text NOT NULL,
+--    car_category   category NOT NULL,
+--    car_vin        ...,
+--    owner_id       integer REFERENCES owners_data (owner_id)
+--)
