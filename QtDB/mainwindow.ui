@@ -232,7 +232,88 @@
             </widget>
            </item>
            <item>
-            <widget class="QComboBox" name="comboBox"/>
+            <widget class="QComboBox" name="comboBox">
+             <item>
+              <property name="text">
+               <string>A</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>A1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>B</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>BE</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>B1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>C</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>CE</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>C1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>C1E</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>D</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>DE</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>D1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>D1E</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>M</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Tm</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Tb</string>
+              </property>
+             </item>
+            </widget>
            </item>
            <item>
             <widget class="QPushButton" name="pushButton_3">
