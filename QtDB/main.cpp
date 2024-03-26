@@ -17,10 +17,9 @@ ITable* table_cars   = new   TableCars(host, port, user_name, user_pass, db_name
 
 int main(int argc, char *argv[])
 {
-    /*
+
     QApplication a(argc, argv);
-    MainWindow w;
+    MainWindow w(nullptr, table_owners, table_cars);
     w.show();
     return a.exec();
-    */
 }
