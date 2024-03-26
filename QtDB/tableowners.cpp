@@ -6,6 +6,7 @@
 #include <QtSql/QSqlDatabase>
 #include <QtSql/QSqlError>
 
+// Создание объекта таблицы с переданными параметрами
 TableOwners::TableOwners(QString _host, int _port, QString _user_name, QString _user_pass, QString _db_name)
     : ITable(_host, _port, _user_name, _user_pass, _db_name)
 {
@@ -22,10 +23,12 @@ TableOwners::TableOwners(QString _host, int _port, QString _user_name, QString _
     qDebug() << db.isOpen() << db.lastError().text() << '\n';
 }
 
+// Удаление объекта таблицы
 TableOwners::~TableOwners() {
     db.close();
 }
 
+// Чтение таблицы
 QSqlQuery& TableOwners::read() {
     if ( db.open() ) {
         QSqlQuery* query = new QSqlQuery(db);
@@ -40,6 +43,7 @@ QSqlQuery& TableOwners::read() {
     }
 }
 
+// Добавление элемента в таблицу
 bool TableOwners::insert(QList<QString> args) {
     if ( db.open() ) {
         // Если количество элементов не совпадает с количеством столбцов
@@ -70,6 +74,7 @@ bool TableOwners::insert(QList<QString> args) {
     }
 }
 
+// Удаление элемента из таблицы
 bool TableOwners::remove(unsigned int ID) {
     if ( db.open() ) {
         QSqlQuery query = QSqlQuery(db);
@@ -88,6 +93,7 @@ bool TableOwners::remove(unsigned int ID) {
     }
 }
 
+// Проверка, открыта ли БД
 bool TableOwners::isDBopen() {
     return db.isOpen();
 }
