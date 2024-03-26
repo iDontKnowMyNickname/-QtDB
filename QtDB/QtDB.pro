@@ -13,11 +13,13 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    tablecars.cpp \
     tableowners.cpp
 
 HEADERS += \
     ITable.h \
     mainwindow.h \
+    tablecars.h \
     tableowners.h
 
 FORMS += \

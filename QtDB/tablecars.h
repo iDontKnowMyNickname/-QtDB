@@ -1,14 +1,14 @@
-#ifndef TABLEOWNERS_H
-#define TABLEOWNERS_H
+#ifndef TABLECARS_H
+#define TABLECARS_H
 
-#include <ITable.h>
+#include "ITable.h"
 
-class TableOwners : public ITable
+class TableCars : public ITable
 {
 public:
-    TableOwners(QString _host, int _port, QString _user_name, QString _user_pass, QString _db_name);
+    TableCars(QString _host, int _port, QString _user_name, QString _user_pass, QString _db_name);
 
-    virtual ~TableOwners();
+    virtual ~TableCars();
 
     virtual QSqlQuery& read();
 
@@ -28,4 +28,4 @@ protected:
     QSqlDatabase db;    // БД
 };
 
-#endif // TABLEOWNERS_H
+#endif // TABLECARS_H

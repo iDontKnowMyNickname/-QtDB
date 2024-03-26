@@ -11,8 +11,10 @@
 // Интерфейс для двух классов, которые будут работать с таблицами
 class ITable {
     public:
-    ITable(QString _host, int _port, QString _user_name, QString _user_pass, QString _db_name) :
-        host(_host), port(_port), user_name(_user_name), user_pass(_user_pass), db_name(_db_name) {};
+        ITable(QString _host, int _port, QString _user_name, QString _user_pass, QString _db_name) :
+            host(_host), port(_port), user_name(_user_name), user_pass(_user_pass), db_name(_db_name) {};
+
+        virtual ~ITable() {};
 
         // Читает всю таблицу и возвращает QSqlQuery, позволяющий построить таблицу в GUI
         virtual QSqlQuery& read() = 0;
