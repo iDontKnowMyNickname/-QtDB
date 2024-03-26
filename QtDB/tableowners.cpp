@@ -59,6 +59,10 @@ bool TableOwners::insert(QList<QString> args) {
 
         qDebug() << query.lastError().text() << '\n';
 
+        if ( query.lastError().text().length() ) {
+            throw query.lastError().text();
+        }
+
         return true;
     }
     else {
@@ -74,8 +78,10 @@ bool TableOwners::remove(unsigned int ID) {
         query.exec();
 
         qDebug() << query.lastError().text() << '\n';
-
-        return true;
+        if ( query.lastError().text() == "" )
+            return true;
+        else
+            return false;
     }
     else {
         throw "Database is closed or something... Look at TableOwners::insert()\0";

@@ -4,6 +4,10 @@
 #include <QMainWindow>
 
 #include <QStandardItemModel>
+#include <QRegularExpression>
+#include <QRegularExpressionMatch>
+
+#include <QMessageBox>
 
 #include <ITable.h>
 

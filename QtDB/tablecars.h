@@ -20,7 +20,7 @@ public:
 
 protected:
     //QString host;       // Хост сервера БД
-    //int port;       // Порт сервера БД
+    //int port;           // Порт сервера БД
     //QString user_name;  // Имя пользователя БД
     //QString user_pass;  // Пароль пользователя БД
     //QString db_name;    // Название БД

@@ -84,7 +84,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QSpinBox" name="spinBox"/>
+            <widget class="QSpinBox" name="spinBox">
+             <property name="maximum">
+              <number>9999</number>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QLabel" name="label_5">
@@ -94,7 +98,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QSpinBox" name="spinBox_2"/>
+            <widget class="QSpinBox" name="spinBox_2">
+             <property name="maximum">
+              <number>999999</number>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QLabel" name="label_6">
@@ -128,7 +136,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QSpinBox" name="spinBox_3"/>
+            <widget class="QSpinBox" name="spinBox_3">
+             <property name="maximum">
+              <number>999999999</number>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QPushButton" name="owner_remove_button">
@@ -390,7 +402,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QSpinBox" name="spinBox_6"/>
+            <widget class="QSpinBox" name="spinBox_6">
+             <property name="maximum">
+              <number>999999999</number>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QPushButton" name="car_remove_button">
