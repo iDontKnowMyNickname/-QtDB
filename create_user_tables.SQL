@@ -3,10 +3,10 @@ CREATE USER capybara_user WITH PASSWORD 'iamcapybara';
 
 -- Выдача пользователю привилегий на текущую БД
 DO $$
-	BEGIN
-		EXECUTE
-			'GRANT ALL PRIVILEGES ON DATABASE ' || current_database() || ' TO capybara_user';
-	END;
+    BEGIN
+        EXECUTE
+            'GRANT ALL PRIVILEGES ON DATABASE ' || current_database() || ' TO capybara_user';
+    END;
 $$;
 
 -- Создание таблицы с данными владельцев авто
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS owners_data (
 
 -- Множество категорий водительских прав
 CREATE TYPE cars_categories AS ENUM (
-	'A',
+    'A',
     'A1',
     'B',
     'BE',
