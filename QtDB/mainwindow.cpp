@@ -17,6 +17,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     // this ->setEnabled(false);
     dbask->show();
+    dbask->activateWindow();
+
+
+    this->setHidden(true);
 }
 
 MainWindow::~MainWindow()
@@ -36,6 +40,7 @@ void MainWindow::getConnectionData(QString s1, QString s2, QString s3, QString s
     if ( db.open() ) {
         emit connection_successful();
         this->setEnabled(true);
+        this->setHidden(false);
     }
     else {
         qDebug() << db.lastError().text() << '\n';
