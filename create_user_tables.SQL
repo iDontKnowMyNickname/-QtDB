@@ -50,21 +50,21 @@ CREATE TYPE cars_categories AS ENUM (
 
 -- Таблица с данными об автомобилях
 CREATE TABLE IF NOT EXISTS cars_data(
-	car_id			SERIAL 			PRIMARY KEY,                                -- Идентификатор авто - уникально ецелое число
-	car_number		CHAR(12)		NOT NULL UNIQUE,                            -- Номер авто - формат "X123XX123RUS"
-	car_mark		TEXT   			NOT NULL,                                   -- Марка авто
-	car_color		TEXT   			NOT NULL,                                   -- Цвет авто
-	car_category	cars_categories	NOT NULL,                                   -- Категория прав из множества cars_categories
-	car_vin			char(17)		NOT NULL UNIQUE,                            -- VIN номер авто 
-	owner_id		INTEGER			NOT NULL,                                   -- Ссылка на владельца авто
+    car_id          SERIAL              PRIMARY KEY,                                -- Идентификатор авто - уникально ецелое число
+    car_number      CHAR(12)            NOT NULL UNIQUE,                            -- Номер авто - формат "X123XX123RUS"
+    car_mark        TEXT                NOT NULL,                                   -- Марка авто
+    car_color       TEXT                NOT NULL,                                   -- Цвет авто
+    car_category    cars_categories     NOT NULL,                                   -- Категория прав из множества cars_categories
+    car_vin         char(17)            NOT NULL UNIQUE,                            -- VIN номер авто 
+    owner_id        INTEGER             NOT NULL,                                   -- Ссылка на владельца авто
                                                                                 -- Ряд проверок:
-	CHECK( car_number ~ '^[АВЕКМНОРСТУХ]\d\d\d[АВЕКМНОРСТУХ]{2}\d\d\d?RUS$' ),  -- Формат номера авто - допустимая буква, три цифры, две буквы, 2-3 цифры, "RUS": А123ВЕ36RUS
-	CHECK( NOT car_mark = '' ),                                                 -- 
-	CHECK( NOT car_color = '' ),                                                --
-	CHECK( car_vin ~ '^[A-HJ-NPR-Z\d]{17}$' ),                                  --
-	FOREIGN KEY (owner_id) REFERENCES owners_data(owner_id)                     --
-		ON DELETE NO ACTION                                                     --
-		ON UPDATE CASCADE                                                       --
+    CHECK( car_number ~ '^[АВЕКМНОРСТУХ]\d\d\d[АВЕКМНОРСТУХ]{2}\d\d\d?RUS$' ),  -- Формат номера авто - допустимая буква, три цифры, две буквы, 2-3 цифры, "RUS": А123ВЕ36RUS
+    CHECK( NOT car_mark = '' ),                                                 -- 
+    CHECK( NOT car_color = '' ),                                                --
+    CHECK( car_vin ~ '^[A-HJ-NPR-Z\d]{17}$' ),                                  --
+    FOREIGN KEY (owner_id) REFERENCES owners_data(owner_id)                     --
+        ON DELETE NO ACTION                                                     --
+        ON UPDATE CASCADE                                                       --
 );
 
 -- Команды для удаления таблиц и пользователя
