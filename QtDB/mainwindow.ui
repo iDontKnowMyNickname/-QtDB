@@ -11,25 +11,31 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>База данных</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QTabWidget" name="tabWidget">
-      <property name="currentIndex">
-       <number>0</number>
+      <property name="minimumSize">
+       <size>
+        <width>350</width>
+        <height>0</height>
+       </size>
       </property>
-      <widget class="QWidget" name="tab_2">
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="tab_0">
        <attribute name="title">
-        <string>Авто</string>
+        <string>Владельцы</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
          <widget class="QFrame" name="frame">
           <property name="minimumSize">
            <size>
-            <width>300</width>
+            <width>350</width>
             <height>0</height>
            </size>
           </property>
@@ -46,13 +52,6 @@
            <enum>QFrame::Raised</enum>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_3">
-           <item>
-            <widget class="Line" name="line_3">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
            <item>
             <widget class="QLabel" name="label_13">
              <property name="font">
@@ -86,7 +85,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_2"/>
+            <widget class="QLineEdit" name="lineEdit_0_0"/>
            </item>
            <item>
             <widget class="QLabel" name="label_4">
@@ -96,7 +95,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_3"/>
+            <widget class="QLineEdit" name="lineEdit_0_1"/>
            </item>
            <item>
             <widget class="QLabel" name="label_5">
@@ -106,7 +105,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_4"/>
+            <widget class="QLineEdit" name="lineEdit_0_2"/>
            </item>
            <item>
             <widget class="QLabel" name="label_6">
@@ -116,7 +115,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QSpinBox" name="spinBox"/>
+            <widget class="QSpinBox" name="spinBox_0_0"/>
            </item>
            <item>
             <widget class="QLabel" name="label_7">
@@ -126,7 +125,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QSpinBox" name="spinBox_2"/>
+            <widget class="QSpinBox" name="spinBox_0_1"/>
            </item>
            <item>
             <widget class="QLabel" name="label_8">
@@ -148,7 +147,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_5">
+              <widget class="QLineEdit" name="lineEdit_0_3_0">
                <property name="maximumSize">
                 <size>
                  <width>41</width>
@@ -180,7 +179,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_6">
+              <widget class="QLineEdit" name="lineEdit_0_3_1">
                <property name="maximumSize">
                 <size>
                  <width>41</width>
@@ -212,7 +211,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_7">
+              <widget class="QLineEdit" name="lineEdit_0_3_2">
                <property name="maximumSize">
                 <size>
                  <width>28</width>
@@ -244,7 +243,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_8">
+              <widget class="QLineEdit" name="lineEdit_0_3_3">
                <property name="maximumSize">
                 <size>
                  <width>28</width>
@@ -319,7 +318,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_9"/>
+            <widget class="QSpinBox" name="spinBox_0">
+             <property name="maximum">
+              <number>2000000000</number>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QPushButton" name="pushButton_4">
@@ -356,7 +359,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit"/>
+             <widget class="QLineEdit" name="lineEdit_0_5"/>
             </item>
             <item>
              <widget class="QPushButton" name="pushButton_5">
@@ -368,7 +371,43 @@
            </layout>
           </item>
           <item>
-           <widget class="QTableWidget" name="tableWidget"/>
+           <widget class="QTableWidget" name="tableWidget">
+            <column>
+             <property name="text">
+              <string>ID</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Фамилия</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Имя</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Отчество</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Серия</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Номер</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Телефон</string>
+             </property>
+            </column>
+           </widget>
           </item>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout">
@@ -438,13 +477,411 @@
       </widget>
       <widget class="QWidget" name="tab_1">
        <attribute name="title">
-        <string>Владельцы</string>
+        <string>Авто</string>
        </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_10">
+        <item>
+         <widget class="QFrame" name="frame_2">
+          <property name="minimumSize">
+           <size>
+            <width>350</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>350</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <widget class="QLabel" name="label_34">
+             <property name="text">
+              <string>Добавление авто</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_33">
+             <property name="text">
+              <string>Номер</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_2">
+             <property name="placeholderText">
+              <string>X000XX000RUS</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_35">
+             <property name="text">
+              <string>Марка</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_3"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_36">
+             <property name="text">
+              <string>Цвет</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_4"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_37">
+             <property name="text">
+              <string>Категория прав</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBox"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_38">
+             <property name="text">
+              <string>VIN</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_5"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_14">
+             <property name="text">
+              <string>Добавить авто</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_8">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_39">
+             <property name="text">
+              <string>Удаление авто</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_9">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_40">
+             <property name="text">
+              <string>Идентификатор</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="spinBox">
+             <property name="maximum">
+              <number>2000000000</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <item>
+             <widget class="QLabel" name="label_31">
+              <property name="text">
+               <string>Найти</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_11">
+              <property name="text">
+               <string>Поиск</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="tableWidget_3">
+            <column>
+             <property name="text">
+              <string>ID</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Номер</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Марка</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Цвет</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Категория</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>ViN</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>ID владельца</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <item>
+             <spacer name="horizontalSpacer_5">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_12">
+              <property name="text">
+               <string>Предыдущая</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_32">
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>100</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_13">
+              <property name="text">
+               <string>Следующая</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </widget>
-      <widget class="QWidget" name="tab_3">
+      <widget class="QWidget" name="tab_2">
        <attribute name="title">
         <string>Совмещение</string>
        </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item>
+         <widget class="QLabel" name="label_41">
+          <property name="text">
+           <string>Дважды кликните мышью на нужного владельца авто, чтобы посмотреть привязанные авто</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_11">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <item>
+             <widget class="QLabel" name="label_42">
+              <property name="text">
+               <string>Владельцы</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="tableWidget_5">
+              <column>
+               <property name="text">
+                <string>ID</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Фамилия</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Имя</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Отчество</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Серия</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Номер</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Телефон</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="Line" name="line_10">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_10">
+            <item>
+             <widget class="QLabel" name="label_43">
+              <property name="text">
+               <string>Авто</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="tableWidget_4">
+              <column>
+               <property name="text">
+                <string>ID</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Номер</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Марка</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Цвет</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Категория</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>VIN</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>ID владельца</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
