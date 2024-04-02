@@ -115,7 +115,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QSpinBox" name="spinBox_0_0"/>
+            <widget class="QSpinBox" name="spinBox_0_0">
+             <property name="maximum">
+              <number>9999</number>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QLabel" name="label_7">
@@ -125,7 +129,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QSpinBox" name="spinBox_0_1"/>
+            <widget class="QSpinBox" name="spinBox_0_1">
+             <property name="maximum">
+              <number>999999</number>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QLabel" name="label_8">
@@ -350,28 +358,10 @@
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_4">
-            <item>
-             <widget class="QLabel" name="label_3">
-              <property name="text">
-               <string>Найти</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="lineEdit_0_5"/>
-            </item>
-            <item>
-             <widget class="QPushButton" name="pushButton_0_search">
-              <property name="text">
-               <string>Поиск</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <widget class="QTableWidget" name="tableWidget">
+           <widget class="QTableWidget" name="tableWidget_0">
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
             <column>
              <property name="text">
               <string>ID</string>
@@ -560,7 +550,88 @@
             </widget>
            </item>
            <item>
-            <widget class="QComboBox" name="comboBox_1_0"/>
+            <widget class="QComboBox" name="comboBox_1_0">
+             <item>
+              <property name="text">
+               <string>A</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>A1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>B</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>BE</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>B1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>C</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>CE</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>C1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>C1E</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>D</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>DE</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>D1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>D1E</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>M</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Tm</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Tb</string>
+              </property>
+             </item>
+            </widget>
            </item>
            <item>
             <widget class="QLabel" name="label_38">
@@ -571,6 +642,20 @@
            </item>
            <item>
             <widget class="QLineEdit" name="lineEdit_1_3"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>ID владельца</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="spinBox">
+             <property name="maximum">
+              <number>2000000000</number>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QPushButton" name="pushButton_1_add">
@@ -643,28 +728,10 @@
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_6">
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_8">
-            <item>
-             <widget class="QLabel" name="label_31">
-              <property name="text">
-               <string>Найти</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="lineEdit"/>
-            </item>
-            <item>
-             <widget class="QPushButton" name="pushButton_1_search">
-              <property name="text">
-               <string>Поиск</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <widget class="QTableWidget" name="tableWidget_3">
+           <widget class="QTableWidget" name="tableWidget_1">
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
             <column>
              <property name="text">
               <string>ID</string>
@@ -793,7 +860,16 @@
              </widget>
             </item>
             <item>
-             <widget class="QTableWidget" name="tableWidget_5">
+             <widget class="QTableWidget" name="tableWidget_2_0">
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <property name="selectionMode">
+               <enum>QAbstractItemView::NoSelection</enum>
+              </property>
+              <property name="selectionBehavior">
+               <enum>QAbstractItemView::SelectRows</enum>
+              </property>
               <column>
                <property name="text">
                 <string>ID</string>
@@ -906,7 +982,10 @@
              </widget>
             </item>
             <item>
-             <widget class="QTableWidget" name="tableWidget_4">
+             <widget class="QTableWidget" name="tableWidget_2_1">
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
               <column>
                <property name="text">
                 <string>ID</string>
@@ -943,59 +1022,6 @@
                </property>
               </column>
              </widget>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_6">
-              <item>
-               <spacer name="horizontalSpacer_4">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QPushButton" name="pushButton_2_1_prev">
-                <property name="text">
-                 <string>Предыдущая</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="page_2_1">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>100</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>TextLabel</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="pushButton_2_1_next">
-                <property name="text">
-                 <string>Следующая</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
             </item>
            </layout>
           </item>

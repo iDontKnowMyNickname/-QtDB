@@ -51,7 +51,7 @@ CREATE TYPE cars_categories AS ENUM (
 -- Таблица с данными об автомобилях
 CREATE TABLE IF NOT EXISTS cars_data(
     car_id          SERIAL              PRIMARY KEY,                                -- Идентификатор авто - уникально ецелое число
-    car_number      CHAR(12)            NOT NULL UNIQUE,                            -- Номер авто - формат "X123XX123RUS"
+    car_number      VARCHAR(12)            NOT NULL UNIQUE,                            -- Номер авто - формат "X123XX123RUS"
     car_mark        TEXT                NOT NULL,                                   -- Марка авто
     car_color       TEXT                NOT NULL,                                   -- Цвет авто
     car_category    cars_categories     NOT NULL,                                   -- Категория прав из множества cars_categories
@@ -66,6 +66,10 @@ CREATE TABLE IF NOT EXISTS cars_data(
         ON DELETE NO ACTION                                                     --
         ON UPDATE CASCADE                                                       --
 );
+
+GRANT ALL PRIVILEGES ON owners_data TO capybara_user;
+GRANT ALL PRIVILEGES ON cars_data   TO capybara_user;
+GRANT ALL ON ALL SEQUENCES IN SCHEMA public TO capybara_user;
 
 -- Команды для удаления таблиц и пользователя
 /*

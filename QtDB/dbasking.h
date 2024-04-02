@@ -8,6 +8,7 @@ namespace Ui {
 class DBAsking;
 }
 
+// Класс, получающий данные для пожключения к БД
 class DBAsking : public QWidget
 {
     Q_OBJECT
@@ -17,13 +18,17 @@ public:
     ~DBAsking();
 
 private slots:
+    // Нажатие кнопки "присоединиться"
     void on_pushButton_clicked();
 
 public slots:
+    // При подключении
     void connection_successful();
+    // При неподключении
     void connection_failed();
 
 signals:
+    // Передача данных для подключения
     void buttonPressed(QString s1, QString s2, QString s3, QString s4, QString s5);
 
 private:
